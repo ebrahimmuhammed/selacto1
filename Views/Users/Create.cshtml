@@ -1,0 +1,22 @@
+@model MESS.Models.User
+
+<h2>Create New Product</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="productName"></label>
+        <input asp-for="productName" class="form-control"/>
+        <span asp-validation-for="productName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="productCategory"></label>
+        <input asp-for="productCategory" class="form-control"/>
+        <span asp-validation-for="productCategory" class="text-danger"></span>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Add</button>
+</form>
+<div>
+    <a asp-action="Index"style="margin-top:10px;">Back to List</a>
+</div>
